@@ -1,2 +1,9 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<h1>Photogur</h1>
+
+<ul>
+  <% @images.each do |image| %>
+    <li><img src="<%= image.url %>"></li>
+    <li><%= image.title %></li>
+    <li><%= image.author %></li>
+  <% end %>
+</ul>

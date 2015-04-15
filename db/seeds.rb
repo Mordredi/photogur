@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Image.create!(
+  :title => "Kitty cat",
+  :author => "Arthur",
+  :url => "http://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg"
+)
