@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'images#index'
   get 'images' => 'images#index'
 
   post 'images' => 'images#create'
@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get 'images/:id' => 'images#show', as: 'image'
 
+  get 'images/:id/edit' => 'images#edit', as: 'edit_image'
+  patch 'images/:id' => 'images#update'
+
+  delete 'images/:id' => 'images#destroy', as: 'delete_picture'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

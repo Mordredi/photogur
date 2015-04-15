@@ -1,8 +1,8 @@
 <h1>Photogur</h1>
-
+<%= link_to "Add Image", "/images/new" %>
 <ul>
   <% @images.each do |image| %>
-    <li><img src="<%= image.url %>"></li>
+    <li><%= link_to image_tag(image.url), "images/#{image.id}" %></li>
     <li><%= image.title %></li>
     <li><%= image.author %></li>
   <% end %>

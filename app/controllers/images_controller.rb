@@ -24,6 +24,22 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
   end
 
+  def update
+    @image = Image.find(params[:id])
+
+    if @image.update_attributes(image_params)
+      redirect_to "/images/#{@image.id}"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to images_url
+  end
+
   private
   def image_params
     params.require(:image).permit(:title, :author, :url)
