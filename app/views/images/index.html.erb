@@ -2,8 +2,10 @@
 <%= link_to "Add Image", "/images/new" %>
 <ul class="preview">
   <% @images.each do |image| %>
-    <li><%= link_to image_tag(image.url, :class => "thumbnail"), "images/#{image.id}" %></li>
-    <li><%= image.title %></li>
-    <li><%= image.author %></li>
+      <div class="card">
+        <li><%= link_to image_tag(image.url, :class => "thumbnail"), "images/#{image.id}" %></li>
+        <li><%= image.title %></li>
+        <li><%= image.author %></li>
+      </div>
   <% end %>
 </ul>

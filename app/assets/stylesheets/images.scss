@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .preview {
   list-style: none;
+  display: flex;
+}
+
+.card {
+  background: red;
 }
 
 .thumbnail {
