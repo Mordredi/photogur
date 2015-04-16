@@ -1,18 +1,2 @@
-<h1>Edit Image</h1>
-<%= form_for @image do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-  </div>
-  <div>
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-  <div>
-    <%= f.submit "Save Image" %>
-  </div>
-<% end %>
+<h2>Edit Image</h2>
+<%= render partial: "form" %>

@@ -1,9 +1,8 @@
-<h1>Photogur</h1>
-<%= link_to "Add Image", "/images/new" %>
+<%= link_to "Add Image", new_image_path, class: 'btn-add' %>
 <ul class="preview">
   <% @images.each do |image| %>
       <div class="card">
-        <li><%= link_to image_tag(image.url, :class => "thumbnail"), "images/#{image.id}" %></li>
+        <li><%= link_to image_tag(image.url, :class => "thumbnail"), image_path(image) %></li>
         <li><%= image.title %></li>
         <li><%= image.author %></li>
       </div>
