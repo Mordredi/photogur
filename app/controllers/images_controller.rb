@@ -40,6 +40,17 @@ class ImagesController < ApplicationController
     redirect_to images_url
   end
 
+  def like
+    image = Image.find(params[:id])
+    image.likes += 1
+    if image.save
+      flash[:notice] = "Liked!"
+    else
+      flash[:notice] = "Whoops! Can't like."
+    end
+    redirect_to images_path
+  end
+
   private
   def image_params
     params.require(:image).permit(:title, :author, :url)

@@ -5,6 +5,7 @@
         <li><%= link_to image_tag(image.url, :class => "thumbnail"), image_path(image) %></li>
         <li><%= image.title %></li>
         <li><%= image.author %></li>
+        <li>Likes: <%= image.likes %></li>
       </div>
   <% end %>
 </ul>

@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20150416201254) do
     t.string   "title"
     t.string   "author"
     t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "likes"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "likes",      default: 0
   end
 
 end
