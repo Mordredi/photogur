@@ -6,6 +6,7 @@
         <li><%= image.title %></li>
         <li><%= image.author %></li>
         <li>Likes: <%= image.likes %></li>
+        <li><%= link_to "Like Image", like_image_path(id: image.id), class: 'like' %></li>
       </div>
   <% end %>
 </ul>

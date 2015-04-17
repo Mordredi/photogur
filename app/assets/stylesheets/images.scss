@@ -46,6 +46,13 @@
   align-items: center;
 }
 
+.like {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: linear-gradient(hsl(238, 100%, 6%), hsl(244, 100%, 34%));
+}
+
 .thumbnail {
   width: 150px;
   height: auto;
